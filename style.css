@@ -1,0 +1,524 @@
+    @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Kaushan+Script&family=League+Spartan:wght@500&family=Noto+Sans+JP&family=Poppins:ital@1&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    .max-width{
+        max-width: 1300px;
+        padding:0 80px;
+        margin: auto;
+    }
+    ::-webkit-scrollbar {
+        background: white;
+        width: 3px;
+    }
+    ::-webkit-scrollbar-button{
+        background: #ffffff;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: #555555;
+        border-radius: 10px;
+    }
+    body{
+        background: rgb(93,112,164);
+    background: linear-gradient(180deg, rgb(139, 145, 161) 0%, rgb(103, 106, 133) 64%, rgb(67, 66, 88) 100%); 
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;   
+        padding: 10px 0;
+        border-radius: 0 0 30px 0;
+        z-index: 999;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.4s ease; 
+    }
+    .navbar.sticky{
+        padding: 13px 0;
+        background: #475980;
+        transition: all 0.4s ease;
+    }
+    .navbar .max-width{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar .logo a{  
+        color: #3b3941;
+        font-size: 35px;
+        font-weight: 600;    
+        font-family: 'Kaushan Script', cursive; 
+    }
+    .navbar .logo a span{
+        z-index: 1;
+        color: #0e0c77;
+
+    }
+    .navbar.sticky .logo a span{
+        color: #3b3941;
+    }
+    .navbar .menu li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 40px;
+    }
+    .navbar .menu li a{
+        color: #dbdbdb;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 25px;
+        transition: all 0.6s ease;
+    }
+    .navbar .menu li a:hover{
+        color: #0e0c77;
+    }
+    .navbar.sticky .menu li a:hover{
+        color: #a8a6ae;
+    }
+    .navbar.sticky .menu.active{
+        background: #475980;
+    }
+    /* menu btn styling */
+    .menu-btn{
+        color: #3b3941;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+/* home section styling */
+.home {
+    display:flex;
+    background: url(gambar/sekolah.jpeg) no-repeat center center/cover fixed ;
+    margin-left: 1.21cm;
+    width: 93.4%;
+    height: 94vh;
+    border-radius: 0 0 30px 30px;
+    color: #fdfdfd;
+    min-height: 500px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 20px;
+}
+.home .home-content .text-2{
+    font-size: 54px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+/* all similar atyling code */
+    section{
+        padding: 100px 0;
+    
+
+}
+.sejarah .jurusan .visimisi .guru, footer{
+    font-family: 'Poppins', sans-serif;
+}
+section li, p{
+    font-family: 'League Spartan', sans-serif;
+
+}
+.sejarah .sejarah-content,
+.jurusan .jurusan-content,
+.visimisi .vismis-content,
+footer .footer-content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .text{
+    font-family: 'Barlow', sans-serif;
+}
+section .title{
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111111;
+    transform: translateX(-50%);
+}
+
+/* sejarah section styling */
+section{
+    padding: 100px 0;
+}
+
+.sejarah .sejarah-content .left{
+    width: 45%;
+}
+
+.sejarah .sejarah-content .left img{
+    height: 300px;
+    width: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.sejarah .sejarah-content .right{
+    width: 55%;
+}
+
+.sejarah .sejarah-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sejarah .sejarah-content .right p{
+    text-align: justify;
+}
+
+/* jurusans section styling */
+.jurusan {
+    color: #a8a6ae;
+    background: #264891bd;
+    box-shadow: 0 6px 12px 2px #000000;
+    width: 100%;
+    border-radius: 0 100px 90px 0;
+}
+.jurusan .title:before{
+    background: #a8a6ae;
+}
+
+
+.jurusan .jurusan-content{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content:center;
+    gap: 20px 30px;
+}
+.jurusan .jurusan-content .card{
+    width: calc(30% - 25px);
+    height: 50vh;
+    background:#06007e65 ;
+    text-align: center;
+    border-radius: 30px;
+    padding: 20px 25px;
+    transition: all 0.4s ease;
+}
+.jurusan .jurusan-content .card:hover{
+    background: #2f5991;
+}
+.jurusan .jurusan-content .card img{
+    width: 2.2cm;
+}
+.jurusan .jurusan-content .card .box{
+    transition: all 0.4s ease;
+}
+.jurusan .jurusan-content .card:hover .box{
+    transform: scale(1.05);
+}
+.jurusan .jurusan-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* vismis section styling */
+
+
+.visimisi .vismis-content .left{
+    width: 45%;
+}
+
+.visimisi .vismis-content .left img{
+    height: 300px;
+    width: 420px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.visimisi .vismis-content .right{
+    width: 55%;
+}
+
+.visimisi .vismis-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 30px 0 10px 0;
+}
+
+.visimisi .vismis-content .right p{
+    text-align: justify;
+}
+.visimisi .vismis-content li{
+    margin-left: 17px;
+    line-height: 30px;
+    
+}
+/* prokpem section styling */
+.guru {
+    display: grid;
+    color: #a8a6ae;
+    position: relative;
+    left: 107px;
+    margin-bottom: 50px;
+    background: #264891bd;
+    width: 93%;
+    box-shadow: 0 6px 19px #111;
+    border-radius: 90px 0 0 90px;
+}
+.guru .title:before{
+    background: #a8a6ae;
+}
+
+.guru .guru-content{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content:center;
+    gap: 20px 30px;
+}
+.guru .guru-content .card{
+    width: calc(28% - 30px);
+    background:#06007e65 ;
+    text-align: center;
+    border-radius: 7px 30px 10px 30px;
+    padding: 20px 25px;
+    transition: all 0.4s ease;
+}
+.guru .guru-content .card img{
+    border-radius: 10px;
+    width: 5cm;
+    
+}
+.guru .guru-content .card .box{
+    transition: all 0.4s ease;
+}
+.guru .guru-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+/* footer styling */
+footer{
+    position: absolute;
+    background: #475980;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    /* border-radius: 0 60px 0 0; */
+    color: #a8a6ae;
+    /* float: left; */
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.kaki-bawah{
+    background: #3b507e;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.kaki-bawah{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.kaki-bawah span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+
+/* responsive media query start */
+@media (max-width: 1300px){
+.home .max-width{
+    margin-left: 0px;
+}
+}
+@media (max-width: 1104px){
+    .sejarah .sejarah-content .left img{
+        height: 200px;
+        width: 350px;
+    }
+    .visimisi .vismis-content .left img{
+        width: 320px;
+        height: 200px;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding:0 50px;
+    }
+
+}
+@media (max-width: 947px){
+    
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar{
+        z-index: 1;
+    }
+    .navbar .menu {
+        z-index: -1;
+        position: fixed;
+        visibility: hidden;
+        opacity: 0;
+        height: 60vh;
+        width: 100%;
+        bottom: 27%;
+        left: 0;
+        border-radius: 0 20px 50px 30px;
+        background: #afafaf00;
+        text-align: center;
+        padding-top: 1.4cm;
+        transition: all 0.4s ease;
+    }
+    
+    .navbar .menu.active{
+        bottom: 31.3%;
+        visibility: visible;
+        opacity: 1;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        z-index: -1;
+        display: inline-block;
+        background: #475980;
+        border-radius: 10px;
+        margin: 20px 0;
+        font-size: 20px;
+    }
+    .navbar .menu li a:hover{
+        color: #0e0c77;
+    }
+    .home{
+        margin-left: 28px;
+        
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+        
+    }
+    .max-width{
+    max-width: 800px;
+}
+    .sejarah .sejarah-content .column{
+        width: 100%;
+    }
+    .sejarah .sejarah-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+
+    }
+    .sejarah .sejarah-content .right{
+        flex: 100%;
+    }
+    .visimisi .vismis-content .column{
+        width: 100%;
+    }
+    .visimisi .vismis-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+
+    }
+    
+    .visimisi .vismis-content .right{
+        flex: 100%;
+    }
+    .jurusan .jurusan-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .guru{
+        margin-left: 1.43cm;
+    }
+    .guru .guru-content .card{
+        width: calc(50% - 10px);
+    }
+    
+}
+@media (max-width: 690px){
+    .max-width{
+        padding:0 23px;
+    }
+    .home{
+        margin-left: 13px;
+        
+    }
+    .home .home-content .text-2{
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+        
+    }
+    .jurusan .jurusan-content .card{
+        width: 100%;
+    }
+    .guru{
+        margin-left: 1.7pc;
+    }
+    .guru .guru-content .card{
+        width: 100%;
+    }
+@media (max-width: 500px){
+    
+    .home .home-content .text-2{
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 20px;
+        
+
+    }
+    
+   
+}
+}
